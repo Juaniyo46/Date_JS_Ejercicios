@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//Obtenemos la fecha y la hora actual
+		var fechaAnt = new Date();
+		var tiempoAnt = fechaAnt.getTime();
+
+		//Pedimos el nombre y los apellidos
+		var nombre = prompt("Introduzca su nombre");
+		var apellidos = prompt("Introduzca sus apellidos");
+
+		//Obtenemos la fecha y hora una vez finalizado
+		var fechaDesp = new Date();
+		var tiempoDesp = fechaDesp.getTime();
+
+		//Restamos el timepo ultimo al primero y lo dividimos para pasarlo a segundos.
+		var tiempo = (tiempoDesp - tiempoAnt) / 1000;
+
+		//Le ponemos 0 decimales a los segundos.
+		tiempo = tiempo.toFixed(0);
+
+		document.writeln("En introducir " + nombre + " " + apellidos + " ha tardado " + tiempo + " segundos.");
+
+	</script>
+</body>
+</html>

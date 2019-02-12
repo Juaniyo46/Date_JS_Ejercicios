@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 1</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var fecha = new Date();
+
+		var dia = fecha.getDay();
+		var diaForm;
+		switch (dia) {
+			case 0:
+				diaForm = "Domingo";
+				break;
+			case 1:
+				diaForm = "Lunes";
+				break;
+			case 2:
+				diaForm = "Martes";
+				break;
+			case 3:
+				diaForm = "Miercoles";
+				break;
+			case 4:
+				diaForm = "Jueves";
+				break;
+			case 5:
+				diaForm = "Viernes";
+				break;
+			case 6:
+			diaForm = "Sábado"
+			break;
+		}
+
+
+		var diaNum = fecha.getDate();
+		var mes = fecha.getMonth();
+		var mesForm;
+		switch (mes) {
+			case 0:
+				mesForm = "Enero";
+				break;
+			case 1:
+				mesForm = "Febrero";
+				break;
+			case 2:
+				mesForm = "Marzo";
+				break;
+			case 3:
+				mesForm = "Abril";
+				break;
+			case 4:
+				mesForm = "Mayo";
+				break;
+			case 5:
+				mesForm = "Junio";
+				break;
+			case 6:
+				mesForm = "Julio";
+				break;
+			case 7:
+				mesForm = "Agosto";
+				break;
+			case 8:
+				mesForm = "Septiembre";
+				break;
+			case 9:
+				mesForm = "Octubre";
+				break;
+			case 10:
+				mesForm = "Noviembre";
+				break;
+			case 11:
+				mesForm = "Diciembre";
+				break;
+		}
+
+		var anio = fecha.getFullYear();
+		var horas = fecha.getHours();
+		var minutos = fecha.getMinutes();
+
+		document.write("Hoy es " + diaForm + ", " + diaNum + " de " + mesForm + " de " + anio + " y son las " + horas + ":" + minutos + " horas");
+	</script>
+</body>
+</html>

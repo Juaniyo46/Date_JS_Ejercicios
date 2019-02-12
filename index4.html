@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 4</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var anio = parseInt(prompt("Introduzca el año"));
+		var mes = parseInt(prompt("Introduzca el mes en número"));
+		var dia = parseInt(prompt("Introduzca el dia en número"));
+		mes = mes - 1;
+		var fecha = new Date(anio,mes,dia);
+
+		
+
+		if (isNaN(anio || mes || dia)) {document.write("Los datos introducidos no son correctos");}
+		else if (mes < 0 || mes > 11) { document.write("El mes introducido no es correcto");}
+		else if (dia < 1 || dia > 31) {document.write("El día introducido no es correcto");}
+		else {
+
+			document.write( "Fecha introducida: " + fecha + "<br>");
+
+			//Calculamos la fecha mas 30
+			var sum30 = new Date(anio, mes, dia);
+			sum30.setDate(sum30.getDate() + 30);
+			document.write("Fecha introducida mas 30: " + sum30 + "<br>");
+
+			//Calculamos la fecha mas 60
+			var sum60 = new Date(anio, mes, dia);
+			sum60.setDate(sum60.getDate() + 60);
+			document.write("Fecha introducida mas 60: " + sum60 + "<br>");
+
+			//Calculamos la fecha mas 90
+			var sum90 = new Date(anio, mes, dia);
+			sum90.setDate(sum90.getDate() + 90);
+			document.write("Fecha introducida mas 90: " + sum90)
+
+
+		}
+
+		
+	</script>
+</body>
+</html>

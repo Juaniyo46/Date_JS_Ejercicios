@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 3</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var mes = parseInt(prompt("Introduzca el mes en número"));
+		var anio = parseInt(prompt("Introduzca el año"));
+		mes = mes -1;
+
+		if (isNaN(mes || anio)) {document.write("Los datos introducidos no son correctos");}
+		else {
+
+			var fecha = new Date(anio,mes);
+			var vdia = fecha.getDay();
+			var mesForm;
+
+			switch (mes) {
+				case 0:
+					mesForm = "Enero";
+					break;
+				case 1:
+					mesForm = "Febrero";
+					break;
+				case 2:
+					mesForm = "Marzo";
+					break;
+				case 3:
+					mesForm = "Abril";
+					break;
+				case 4:
+					mesForm = "Mayo";
+					break;
+				case 5:
+					mesForm = "Junio";
+					break;
+				case 6:
+					mesForm = "Julio";
+					break;
+				case 7:
+					mesForm = "Agosto";
+					break;
+				case 8:
+					mesForm = "Septiembre";
+					break;
+				case 9:
+					mesForm = "Octubre";
+					break;
+				case 10:
+					mesForm = "Noviembre";
+					break;
+				case 11:
+					mesForm = "Diciembre";
+					break;
+			}
+
+			document.write(mesForm + " - " + anio + "<br>");
+
+			while (fecha.getMonth() == mes) {
+				
+				switch (fecha.getDay()) { 
+                case 0:
+                    dia = "Domingo";
+                    break;
+                case 1:
+                    dia = "Lunes";
+                    break;
+                case 2:
+                    dia = "Martes";
+                    break;
+                case 3:
+                    dia = "Miercoles";
+                    break;
+                case 4:
+                    dia = "Jueves";
+                    break;
+                case 5:
+                    dia = "Viernes";
+                    break;
+                case 6:
+                    dia = "Sabado";
+                    break;
+            }
+
+            document.write(fecha.getDate() + "(" + dia + ")<br>");
+            fecha.setDate(fecha.getDate() +1);
+			}
+	}
+			
+		
+	</script>
+</body>
+</html>
